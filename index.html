@@ -1,0 +1,228 @@
+<html>
+<head>
+<title>LIGHTS</title>
+
+<link rel="stylesheet" href="lights.css">
+
+<!--[if lt IE 9]>
+<script src=”http://html5shim.googlecode.com/svn/trunk/html5.js”>
+</script>
+<![endif]-->
+
+</head>
+
+<div id="wrapper">
+
+<header>
+ 
+<derp><span style="align:left;"> Lights</span><span style="float:right;"> <img src="images/logo.png" alt="Lights logo"; width=293; height=97;></img></span> </derp>
+
+</header>
+<hr width=100%  align=center> 
+<nav>
+<a href = "index.html">Home</a>&nbsp;&nbsp;
+<a href = "blog.html">Blog</a>&nbsp;&nbsp;
+<a href = "tour.html">Tour</a>&nbsp;&nbsp;
+<a href = "photos.html">Photos</a>&nbsp;&nbsp;
+<a href = "about.html">About</a>
+
+ </nav>
+
+<hr width=100%  align=center> 
+
+<body id="body" onresize="resizeCanvas()" >
+
+<main> 
+
+
+<div>
+
+<h2> Little Machines out Now! </h2>
+
+Lights' newest album out now on iTunes! <br>
+<span style = "font-size:0.8em;"><a href="http://smarturl.it/littlemachinesit">Purchase here</a></span>
+
+<hr width=100%  align=center> 
+
+</div>
+
+
+
+
+<div>
+
+<h2> New shows announced! </h2>
+
+LIGHTS has added two new shows! <br>
+
+<span style = "font-size:0.8em;"> July 3 Saskatoon, SK </span> <br>
+<span style = "font-size:0.8em;"> August 8 Brighton, CO</span> <br>
+<span style = "font-size:0.8em;"> Tickets are on sale now. </span> <br>
+
+<hr width=100%  align=center> 
+
+</div>
+
+<div>
+
+<h2> 5 Things to know about LIGHTS </h2>
+
+LIGHTS is features on People.com! <br>
+
+<span style = "font-size:0.8em;"> <a href="http://www.people.com/article/lights-beau-bokan-daughter-rocket-instagram-juno-award">Read the article here</a> </span> <br>
+
+
+<hr width=100%  align=center> 
+
+</div>
+
+
+<div>
+
+<h2> Juno Awards Win! </h2>
+
+Congratulations to LIGHTS for winning the Juno Award in the category of “Pop Album of the Year” for Little Machines!!
+See some of the behind the scenes photos from LIGHTS on …
+<span style = "font-size:0.8em;"> <a href="http://music.iamlights.com/juno-awards-win/">Read More »</a> </span> <br>
+
+
+<hr width=100%  align=center> 
+
+</div>
+
+
+
+
+
+
+</main>
+
+
+<div>
+
+
+<canvas id="slides" style="width:100%;" ></canvas>
+
+<script>
+
+
+
+
+var c=document.getElementById("slides");
+var g=c.getContext("2d");
+
+c.height = 320;
+c.width = window.innerWidth;
+
+var array = new Array();
+
+
+array[0] = document.createElement("IMG");
+array[0].setAttribute("src", "./images/pic1full.jpg");
+array[0].setAttribute("width", 320);
+array[0].setAttribute("height", 320);
+
+array[1] = document.createElement("IMG");
+array[1].setAttribute("width", 320);
+array[1].setAttribute("height", 320);
+array[1].setAttribute("src", "./images/pic2full.jpg");
+
+array[2] = document.createElement("IMG");
+array[2].setAttribute("width", 320);
+array[2].setAttribute("height", 320);
+array[2].setAttribute("src", "./images/pic3full.jpg");
+
+array[3] = document.createElement("IMG");
+array[3].setAttribute("width", 320);
+array[3].setAttribute("height", 320);
+array[3].setAttribute("src", "./images/pic4full.jpg");
+
+array[4] = document.createElement("IMG");
+array[4].setAttribute("width", 320);
+array[4].setAttribute("height", 320);
+array[4].setAttribute("src", "./images/pic5full.jpg");
+
+array[5] = document.createElement("IMG");
+array[5].setAttribute("width", 320);
+array[5].setAttribute("height", 320);
+array[5].setAttribute("src", "./images/pic6full.jpg");
+
+array[6] = document.createElement("IMG");
+array[6].setAttribute("width", 320);
+array[6].setAttribute("height", 320);
+array[6].setAttribute("src", "./images/pic7full.jpg");
+
+array[7] = document.createElement("IMG");
+array[7].setAttribute("width", 320);
+array[7].setAttribute("height", 320);
+array[7].setAttribute("src", "./images/pic8full.jpg");
+
+array[8] = document.createElement("IMG");
+array[8].setAttribute("width", 320);
+array[8].setAttribute("height", 320);
+array[8].setAttribute("src", "./images/pic9full.jpg");
+
+
+var arrayPos = new Array();
+
+arrayPos[0] = 0;
+arrayPos[1] = 340;
+arrayPos[2] = 680;
+arrayPos[3] = 1020;
+arrayPos[4] = 1360;
+arrayPos[5] = 1700;
+arrayPos[6] = 2040;
+arrayPos[7] = 2380;
+arrayPos[8] = 2720;
+
+
+
+var i = 0;
+function step()
+{
+  	
+	g.clearRect(0,0, 1920,320);
+
+for(i = 0; i < 9; i++){
+
+	g.drawImage(array[i], arrayPos[i], 0, 320, 320);
+
+	if(arrayPos[i] > -320)
+	arrayPos[i]--;
+	else
+	arrayPos[i]+=3060
+}
+
+
+   setTimeout("step()", 10);
+}
+
+window.onload = step;
+
+
+
+function resizeCanvas()
+{
+
+  	c.width = window.innerWidth;	
+
+}
+
+</script>
+
+
+</div>
+
+
+</body>
+
+
+<footer>
+
+<a href = "mailto:Sam@Burns.com">Sam@Burns.com</a><br>
+
+<span style="width:75%; color:#FFFFFF"> All images other than the background image were obtained from <a href="music.iamlights.com">music.iamlights.com</a> <br> This website was created for an educational project only</span>
+</footer>
+</div>
+
+</html>
